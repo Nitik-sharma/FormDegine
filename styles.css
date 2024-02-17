@@ -15,8 +15,6 @@
 }
 .container {
   display: flex;
-  flex: 1;
-  max-height: 100%;
 }
 
 .sidebar {
@@ -67,7 +65,7 @@
   margin-top: 1rem;
   border-radius: 5px;
   background-color: #fff;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .input-text {
   display: flex;
@@ -91,4 +89,22 @@ label {
 }
 .select {
   padding: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    height: 10%;
+    padding: 1rem;
+  }
+  .buttons {
+    flex-direction: row;
+  }
+  .content {
+    width: 100%;
+    height: 100vh;
+  }
 }
